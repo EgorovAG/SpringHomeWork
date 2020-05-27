@@ -13,30 +13,12 @@ public class Client2 {
         this.surname = surname;
     }
 
-    @PostConstruct
     public void init() {
         System.out.println("init method Client");
     }
 
-    @PreDestroy
     public void destroy() {
         System.out.println("destroy method Client");
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getSurname() {
-        return surname;
-    }
-
-    public void setSurname(String surname) {
-        this.surname = surname;
     }
 
     @Override

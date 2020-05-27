@@ -8,7 +8,7 @@ public class Computer implements StateComputer {
     private Parts ram;
     private boolean resState = false;
 
-    Computer(int id, String name, Cpu cpu, Hdd hdd, Ram ram) {
+Computer(int id, String name, Cpu cpu, Hdd hdd, Ram ram) {
         this.id = id;
         this.name = name;
         this.cpu = cpu;
