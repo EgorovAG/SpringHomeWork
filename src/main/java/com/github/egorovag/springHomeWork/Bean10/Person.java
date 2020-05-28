@@ -16,7 +16,6 @@ public class Person implements AbleToSpeak {
     public void init() {
         System.out.println("method init");
     }
-
     @PreDestroy
     public void destroy() {
         System.out.println("method destroy");
