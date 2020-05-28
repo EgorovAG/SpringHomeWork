@@ -1,5 +1,8 @@
 package com.github.egorovag.springHomeWork.Bean2;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 public class User2 {
     private int id;
     private String login;

@@ -13,6 +13,7 @@ public class User3 {
     private String login;
     private Client3 client;
 
+    @Autowired
     public User3(@Value("3") int id, @Value("loginAlex") String login, Client3 client) {
         this.id = id;
         this.login = login;

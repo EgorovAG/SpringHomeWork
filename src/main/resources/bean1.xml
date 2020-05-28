@@ -10,8 +10,8 @@
        default-destroy-method="destroy">
 
     <bean id="client" class="com.github.egorovag.springHomeWork.Bean1.Client">
-        <constructor-arg index="0" value="Alex"/>
-        <constructor-arg index="1" value="Ivanov"/>
+        <property name="name" value="Alex"/>
+        <property name="surname" value="Alex"/>
     </bean>
 
     <bean id="user" class="com.github.egorovag.springHomeWork.Bean1.User"
