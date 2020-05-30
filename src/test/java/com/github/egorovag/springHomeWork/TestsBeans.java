@@ -1,20 +1,22 @@
 package com.github.egorovag.springHomeWork;
 
-import com.github.egorovag.springHomeWork.Bean1.User;
-import com.github.egorovag.springHomeWork.Bean10.AbleToSpeak;
-import com.github.egorovag.springHomeWork.Bean10.Person;
-import com.github.egorovag.springHomeWork.Bean2.SpringConfig;
-import com.github.egorovag.springHomeWork.Bean2.User2;
-import com.github.egorovag.springHomeWork.Bean3.User3;
-import com.github.egorovag.springHomeWork.Bean4.User4;
-import com.github.egorovag.springHomeWork.Bean5.Client5;
-import com.github.egorovag.springHomeWork.Bean5.User5;
-import com.github.egorovag.springHomeWork.Bean6.User6;
-import com.github.egorovag.springHomeWork.Bean7.Bean7;
-import com.github.egorovag.springHomeWork.Bean8.BeanResult8;
-import com.github.egorovag.springHomeWork.Bean8.InterfaceForBeans;
-import com.github.egorovag.springHomeWork.Bean9.User9;
+import com.github.egorovag.springHomeWork.bean1.User;
+import com.github.egorovag.springHomeWork.bean10.AbleToSpeak;
+import com.github.egorovag.springHomeWork.bean10.Person;
+import com.github.egorovag.springHomeWork.bean11Aspect.AbleToSpeakForAspect;
+import com.github.egorovag.springHomeWork.bean11Aspect.PersonForAspect;
+import com.github.egorovag.springHomeWork.bean2.SpringConfig;
+import com.github.egorovag.springHomeWork.bean2.User2;
+import com.github.egorovag.springHomeWork.bean3.User3;
+import com.github.egorovag.springHomeWork.bean4.User4;
+import com.github.egorovag.springHomeWork.bean5.User5;
+import com.github.egorovag.springHomeWork.bean6.User6;
+import com.github.egorovag.springHomeWork.bean7.Bean7;
+import com.github.egorovag.springHomeWork.bean8.BeanResult8;
+import com.github.egorovag.springHomeWork.bean8.InterfaceForBeans;
+import com.github.egorovag.springHomeWork.bean9.User9;
 import org.junit.jupiter.api.Test;
+import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -123,5 +125,16 @@ public class TestsBeans {
         bean.saySay();
         bean.say();
         context.close();
+    }
+
+    //11 Aspects
+    @Test
+    public void testBean11() {
+        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("aspects.xml");
+        AbleToSpeakForAspect bean = context.getBean(AbleToSpeakForAspect.class);
+        bean.say();
+        bean.saySay();
+        context.close();
+
     }
 }
